@@ -15,7 +15,7 @@
   position: relative;
   width: 100px;
   height: 100px;
-  animation: anim 1s linear .5s infinite;
+  animation: anim 1s linear 0.5s infinite;
 }
 
 .spiner:after {
@@ -38,13 +38,11 @@
   }
 }
 .spinner h1 {
-  color: #313131;
+  color: #2e2e2e;
   text-align: center;
 }
 
-
 /* ------------------------------------------------------ */
-
 
 .all {
   width: 100%;
