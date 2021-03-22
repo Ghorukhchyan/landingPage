@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <!--css -->
+  <link rel="stylesheet" href="/Css/style.css">
+  <link rel="stylesheet" href="/Css/responsive.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap.css">
+  <!-- Aos bootstrup css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS Bootstrup JS   -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- -------------------------Threejs-------------------------- -->
+  <script src="/Threejs/three.js"></script>
+  <!-- --------------------------------scripts for 3d obj loading---------------------- -->
+
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+  <script src="/Threejs/OrbitControl.js"></script>
+  <script src='https://unpkg.com/three@0.99.0/examples/js/loaders/OBJLoader.js'></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/MTLLoader.js"></script>
+</head>
+
+<body>
+
+  <div class="all">
+
+    <div id="loader">
+      <div class="spiner"></div>
+      <h1>Loading...</h1>
+    </div>
+
+
+
+    <!-- ----------------------------------header------------------------------------------- -->
+    <header id="header">
+      <div class="fixed">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"><img src="/img/header_logo.png" alt="" width="80" height="50" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="">Specs</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Video</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Downloads</a></li>
+              <li class="nav-item"><a class="nav-link" href="">FAQ</a></li>
+              <button class="header_but">Buy Now</button>
+            </ul>
+          </div>
+
+        </nav>
+
+      </div>
+      <div class="c-jumbotron">
+        <video class="header_video" autoplay muted loop playsinline>
+          <source src="/videos/header.mp4" type="video/mp4">
+        </video>
+        <!-- Aos animation -->
+        <div class="item" data-aos="zoom-in">
+          <!-- ----------- -->
+          <h1>Make Your Moments Fly</h1>
+          <br />
+          <h4>Kabaq enables users to see virtual 3D food on their table.</h4>
+          <h4>in-restaurant and when ordering online</h4>
+          <a href="https://www.youtube.com/watch?v=6UeYUbWn45U&ab_channel=WebWorkTimeTracker" target="_blank"
+            class="btn">WATCH THE VIDEO</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ---------------------------------part1-------------------------  -->
+
+      <part1>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="part1_header">
+              <p>There are many places you visit once in a lifetime.</p>
+              <p>Bring DJI Mini 2 for a unique perspective
+              </p>
+              <p>and make
+                the most of your travels.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div id="inked-painted1">
+                <img src="/img/one.jpg" id="inked1" alt>
+                <div id="colored1"></div>
+              </div>
+            </div>
+            <div class="col-md-6" style="align-self: center;">
+              <p>Pack Light, Fly Free</p>
+              <h1 data-aos="flip-left"> Just how light is DJI Mini 2? At less than 249 g, it weighs about as much as an
+                apple and fits in the
+                palm of your hand. Compact and convenient, Mini 2 is your ideal travel companion, transforming how you
+                capture your favorite memories. </h1>
+            </div>
+          </div>
+        </div>
+      </part1>
+
+      <!-- ---------------------------------part2-------------------------  -->
+      <part2>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                Small But Mighty
+              </p>
+              <h1 data-aos="flip-right">Thanks to intuitive and advanced features packed in a portable frame, DJI Mini 2
+                provides complete
+                freedom wherever and however you want to create. Whether you’re shooting at a deserted beach or
+                capturing the details of a fun family reunion, Mini 2 can handle it all.</h1>
+            </div>
+            <div class="col-md-6">
+              <div id="inked-painted2">
+                <img src="/img/two.jpg" id="inked2" alt>
+                <div id="colored2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </part2>
+      <!-- ---------------------------------part3-------------------------  -->
+
+      <part3>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 ">
+              <p>It may be small, but this drone packs a ton of power.</p>
+              <video class="part3_video" autoplay muted loop playsinline>
+                <source src="/videos/part_3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-6">
+              <h4>With a max battery life of 31 minutes, DJI Mini 2 grants more than enough time to compose the perfect
+                shot.</h4>
+            </div>
+          </div>
+        </div>
+      </part3>
+
+      <!-- ---------------------------------part4-------------------------  -->
+      <part4>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <p>Some 3D model</p>
+
+            </div>
+            <div class="col-md-6 obj">
+              <div id="threejs">
+                <!-- for three scene -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </part4>
+
+      <!-- ---------------------------------part5-------------------------  -->
+
+      <part5>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Simplify your creativity among the clouds <br> and put amazing shots within reach.</p>
+            </div>
+            <div class="col-md-12">
+              <h1>Simplified Flight for Stunning Content</h1>
+              <h4>DJI Mini 2 carefully optimizes user experience and intelligent features. <br> Thanks to Smart Return
+                to Home, automatic takeoff, and precise hovering, <br> operation is more streamlined and safer than
+                ever</h4>
+            </div>
+            <div class="col-md-12 text-center">
+              <video class="part5_video" autoplay muted loop playsinline>
+                <source src="/videos/part_5.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </part5>
+
+
+      <!-- ---------------------------------part6-------------------------  -->
+      <part6>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 ">
+              <img class="first_img" src="/img/three.jpg" alt="">
+            </div>
+            <div class="col-md-6 flex">
+
+              <div class="flex-container">
+                <div class="r1">
+                  <h6>Snap Adapter</h6>
+                  <img src="/img/1.png" alt="">
+                </div>
+                <div class="r1">
+                  <h6>DIY Creative Kit</h6>
+                  <img src="/img/2.png" alt="">
+                </div>
+              </div>
+
+              <div class="flex-container">
+                <div class="r1">
+                  <h6>Charging Base</h6>
+                  <img src="/img/3.png" alt="">
+                </div>
+                <div class="r1">
+                  <h6>DJI Mini Bag +
+                  </h6>
+                  <img src="/img/4.png" alt="">
+                </div>
+              </div>
+
+              <div class="flex-container">
+                <div class="r1">
+                  <h6>360° Propeller Guard</h6>
+                  <img src="/img/5.png" alt="">
+                </div>
+                <div class="r1">
+                  <h6>Two-Way Charging Hub</h6>
+                  <img src="/img/6.png" alt="">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </part6>
+    </main>
+
+
+    <!-- --------------------------------------------------Footer-------------------------------------- -->
+
+    <footer id="footer">
+      <div class="container-fluid" style="text-align: center;">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="/img/logo.png" alt="" width="150" height="150" style="border-radius: 50%;">
+            <h4>Webwork-Tracker © 2021</h4>
+          </div>
+          <div class="col-md-3">
+            <h6>CONTACT</h6> <br>
+            <p>530 Divisadero St PMB 848,
+              San Francisco, US
+              webwork-tracker.com</p>
+            <img src="/img/footer logo/facebook.png" alt=""
+              style="width: 24px; height: 24px; margin-right: 20px; cursor: pointer;">
+            <img src="/img/footer logo/instagram.png" alt="" style="width: 24px; height: 24px; cursor: pointer;">
+            <img src="/img/footer logo/twitter.png" alt=""
+              style="width: 24px; height: 24px; margin-left: 20px;cursor: pointer;">
+          </div>
+
+          <div class="col-md-3">
+            <h6>ABOUT</h6> <br>
+            <p> <a href="https://www.youtube.com/watch?v=6UeYUbWn45U&ab_channel=WebWorkTimeTracker"
+                target="_blank">Watch the Video</a>
+            <p>Get In Touch</p>
+            FAQ</p>
+          </div>
+
+          <div class="col-md-3">
+            <h6 style="text-align: center;">USE CASES</h6> <br>
+            <ul style="list-style-type:none;">
+              <li>In Restaurant Food Ordering
+                Delivery
+              </li>
+              <li> Kabaq 3D Food on Snapchat
+              </li>
+              <li>
+                3D Banner Ads
+              </li>
+              <li>
+                AR Storytelling
+              </li>
+              <li>
+                AR Food on Facebook
+              </li>
+              <li>
+                WebAR experiences for food brands
+              </li>
+              <li>
+                Snapchat Menus at Restaurant
+
+              </li>
+              <li>
+                AR Effects on Instagram
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+  </div>
+
+  <script src="/Js/script.js"></script>
+  <script src="/Threejs/threeitems.js"></script>
+
+  <!-- ---------------------------for navbar------------------ -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
